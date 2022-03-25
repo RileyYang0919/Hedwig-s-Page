@@ -1,0 +1,111 @@
+* {
+  /* outline: pink 1px solid; */
+}
+body {
+  font-family: "Noto Serif TC", serif;
+  color: white;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url(star.png);
+  -webkit-filter: opacity(30%); /* Safari */
+  filter: opacity(80%);
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding-top: 50px;
+}
+.photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.btnBox {
+  width: 90%;
+  height: 3rem;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 2px #fff0ac solid;
+  animation-name: btnStyle;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.btnBox:hover {
+  animation: none;
+  border-color: white;
+}
+button:hover {
+  background-color: white;
+}
+@keyframes btnStyle {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .btnBox {
+    width: 40rem;
+  }
+  button {
+    padding-left: 0;
+  }
+}
+
+button {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: #fff0ac;
+  border: none;
+  letter-spacing: 2px;
+  font-family: "Noto Serif TC", serif;
+  padding-left: 40px;
+}
+button i {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  font-size: 2rem;
+}
+.letter-spacing-3 {
+  letter-spacing: 2.5px;
+}
+.lineColor {
+  color: #07b53b;
+}
+
+.phoneColor {
+  color: #2894ff;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
