@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -23,31 +23,78 @@
     <title>Hedwig✨水水✨找工作找我</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="app">
       <div class="photo">
         <img src="fake.jpg" alt="" />
       </div>
       <div>
         <h2 class="letter-spacing-3">Hedwig✨水水✨</h2>
         <p class="letter-spacing-3">
-          服務時間：週一至週五08:30-17:30<br />🎁休息時間回覆較慢，請耐心等待🎁
+          服務時間：週一至週五08:30-17:30<br />給你最優質的媒合服務😃<br />
+          姓名😉➕電話☎️➕居住地🏠=預約成功
         </p>
       </div>
-      <div class="btnBox">
+      <div class="btnBox animation1">
         <a href="https://line.me/ti/p/JgGCgEBX6q" target="blank">
-          <button>
-            <i class="fab fa-line lineColor"></i
-            >找工作請➕Line留下：姓名、電話、出生年月日、求職地區
+          <button class="buttonStyle"><i class="fab fa-line lineColor"></i>➕Line叫過去</button>
+        </a>
+      </div>
+      <div class="btnBox animation2 mb-3">
+        <a href="tel:+886-9-65617032">
+          <button class="buttonStyle">
+            <i class="fas fa-phone-alt phoneColor"></i>電話沒接就Line我👆
           </button>
         </a>
       </div>
-      <div class="btnBox">
-        <a href="tel:+886-9-65617032">
-          <button>
-            <i class="fas fa-phone-alt phoneColor"></i>上班時間打電話詢問
-          </button>
-        </a>
+
+      <div class="row mb-3">
+        <div class="col work animation1">
+          <p>土城久坐<br />高薪56K</p>
+          <p class="moreInformation">點擊看更多</p>
+        </div>
+        <div class="col work animation1">
+          <p>土城久坐<br />高薪56K</p>
+          <p class="moreInformation">點擊看更多</p>
+        </div>
+        <div class="col work animation1">
+          <p>土城久坐<br />高薪56K</p>
+          <p class="moreInformation">點擊看更多</p>
+        </div>
+      </div>
+    <!-- 浮出視窗 -->
+      <div class="informationBox">
+        <p>✨高時薪200-240✨<br />✨親朋好友一起來✨</p>
+        <p>▬▬▬▬▬▬【職缺好康】▬▬▬▬▬</p>
+        <br>
+          ✅周領5000</br>
+          ✅夜校生可應徵夜班</br>
+          ✅長期穩定，可轉正</br>
+          ✅免費團膳供餐</br>
+          ✅自由選擇班別，免輪班</br>
+          ✅可領完任獎金</br>
+          ✅高錄取率，可立即報到</br>
+          ✅享勞健保、勞退6%</br>
+        </p>
+        <p>▬▬▬▬▬▬【職缺介紹】▬▬▬▬▬</p>
+        <p>
+          ▶️工作地點：新北市土城區中山路</br>
+          ▶️工作內容：PCB機台操作、檢驗作業、各項製程</br>
+          ▶️工作時間：</br>
+          日班：08:00-16:30</br>
+          中班：16:00-24:30</br>
+          夜班：24:00-08:30</br>
+          ▶️薪資：</br>
+          日班約$37200-49452（含加班津貼）</br>
+          中班約$40720-52972（含加班津貼）</br>
+          夜班約$44240-56492（含加班津貼）</br>
+          ▶️休假制度：做五休二</br>
+          做滿三天即可領2000</br>
+        </p>
+        <button id="closeInformation">
+          關閉
+        </button>
       </div>
     </div>
+
   </body>
 </html>

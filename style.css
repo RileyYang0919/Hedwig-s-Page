@@ -2,7 +2,7 @@
   /* outline: pink 1px solid; */
 }
 body {
-  font-family: "Noto Serif TC", serif;
+  font-family: "微軟正黑體";
   color: white;
 }
 body::before {
@@ -11,14 +11,14 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
+  height: 200%;
+  background-repeat: repeat-y;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  background-image: url(star.png);
-  -webkit-filter: opacity(30%); /* Safari */
-  filter: opacity(80%);
+  background-image: url(back.webp);
+  -webkit-filter: opacity(8 0%); /* Safari */
+  filter: opacity(60%);
   z-index: -1;
 }
 
@@ -29,6 +29,7 @@ body::before {
   text-align: center;
   flex-direction: column;
   padding-top: 50px;
+  position: relative;
 }
 .photo {
   width: 120px;
@@ -46,15 +47,24 @@ img {
   padding: 5px;
   margin-bottom: 10px;
   border: 2px #fff0ac solid;
+}
+.animation1 {
   animation-name: btnStyle;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+.animation2 {
+  animation-name: btnStyle;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
 }
 .btnBox:hover {
   animation: none;
   border-color: white;
 }
-button:hover {
+.buttonStyle:hover {
   background-color: white;
 }
 @keyframes btnStyle {
@@ -68,16 +78,43 @@ button:hover {
     transform: scale(1);
   }
 }
+.work {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+  width: 7rem;
+  cursor: pointer;
+  background-image: url(blossom.png);
+  background-position: center;
+  background-size: cover;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.work p {
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+.moreInformation {
+  text-decoration: underline;
+  color: #6f00d2;
+}
 @media screen and (min-width: 768px) {
   .btnBox {
     width: 40rem;
   }
-  button {
+  .buttonStyle {
     padding-left: 0;
+  }
+  .work {
+    height: 9.5rem;
+    width: 9.5rem;
   }
 }
 
-button {
+.buttonStyle {
   position: relative;
   cursor: pointer;
   width: 100%;
@@ -85,10 +122,12 @@ button {
   background-color: #fff0ac;
   border: none;
   letter-spacing: 2px;
-  font-family: "Noto Serif TC", serif;
+  font-family: "微軟正黑體";
+  font-size: larger;
+  font-weight: 600;
   padding-left: 40px;
 }
-button i {
+.buttonStyle i {
   position: absolute;
   top: 50%;
   left: 8px;
@@ -108,4 +147,48 @@ button i {
 a {
   text-decoration: none;
   color: inherit;
+}
+.informationBox {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 80%;
+  min-height: max-content;
+  z-index: 100;
+  text-align: left;
+  padding: 20px;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.informationBox p {
+  margin: 0;
+}
+.informationBox button {
+  border: none;
+  background-color: #b95159;
+  padding: 5px;
+  letter-spacing: 20px;
+  font-size: larger;
+  font-family: "微軟正黑體";
+  font-weight: 600;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.informationBox button:hover {
+  background-color: #234a63;
+}
+@media screen and (min-width: 768px) {
+  .informationBox {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .informationBox {
+    width: 40%;
+  }
 }
