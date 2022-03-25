@@ -157,6 +157,7 @@ a {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   overflow-y: scroll;
+  z-index: 100;
 }
 .informationBox {
   position: absolute;
@@ -172,7 +173,7 @@ a {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  /* overflow-y: scroll; */
+  z-index: 100;
 }
 .informationBox p {
   margin: 0;
