@@ -23,7 +23,7 @@ const app = Vue.createApp({
     readMore(e) {
       this.isClicked = true;
       if (e.target.parentElement.firstElementChild.textContent === "0") {
-        this.photoURL = "/images/0.png";
+        this.photoURL = "0.png";
         this.sectionText1 = `✨高時薪200-240✨<br />✨親朋好友一起來✨`;
         this.sectionText2 = `▬▬▬▬▬▬【職缺好康】▬▬▬▬▬</br>
         ✅周領5000</br>
@@ -48,7 +48,7 @@ const app = Vue.createApp({
         ▶️休假制度：做五休二</br>
         做滿三天即可領2000</br>`;
       } else if (e.target.parentElement.firstElementChild.textContent === "1") {
-        this.photoURL = "/images/1.png";
+        this.photoURL = "1.png";
         this.sectionText1 = `✨中和8H周休+簡單電腦組裝</br>
         ┗━━━━━━━━━━━┛</br>
         ✔️高錄取</br>
@@ -73,7 +73,7 @@ const app = Vue.createApp({
         日班210/h 加班前2h.308 第3h 384 月領64000(含加班＆所有津貼)</br>
         夜班250/h 加班前2h.335 第3h 418 月領80000(含加班＆所有津貼)</br>`;
       } else if (e.target.parentElement.firstElementChild.textContent === "2") {
-        this.photoURL = "/images/2.png";
+        this.photoURL = "2.png";
         this.sectionText1 = `✨ᴺᴱᵂ 龜山長期-來做遊戲機</br>
         ┗━━━━━━━━━━━━┛`;
         this.sectionText2 = `▬▬▬▬▬▬【好康來報】▬▬▬▬▬</br>
@@ -130,7 +130,7 @@ const app = Vue.createApp({
         ◆供宿:兩人一間套房，500元/月 (含水電費，設備：冷氣、電視、置物櫃…)</br>
         ◆表現優良可轉長期人員並且享有尾牙周獎、紅包禮金等福利`;
       } else if (e.target.parentElement.firstElementChild.textContent === "4") {
-        this.photoURL = "/images/4.png";
+        this.photoURL = "4.png";
         this.sectionText1 = `❤️❤️額外獎金(正常出勤)10000❤️❤️</br>
         ✨ 學生也OK</br>
         ✨ 免費停車位</br>
@@ -153,7 +153,7 @@ const app = Vue.createApp({
         高薪專案至五月底 後續時薪為200-240`;
         this.sectionText3 = ``;
       } else if (e.target.parentElement.firstElementChild.textContent === "5") {
-        this.photoURL = "/images/5.png";
+        this.photoURL = "5.png";
         this.sectionText1 = `❤️ 高額周領8000❤️</br>
         ❤️ 提供[免費]住宿❤️</br>
         ❤️ 免費供餐 吃到飽!!!!❤️</br>
