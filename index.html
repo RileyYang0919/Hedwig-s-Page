@@ -51,6 +51,7 @@
     <!-- 浮出視窗 -->
     <div class="informationBoxWrapper" v-if="isClicked">
       <div class="informationBox">
+        <img :src="photoURL" alt="" class="mb-2">
         <p v-html="sectionText1"></p>
         <p v-html="sectionText2"></p>
         <p v-html="sectionText3"></p>

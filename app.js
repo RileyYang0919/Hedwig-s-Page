@@ -5,6 +5,7 @@ const app = Vue.createApp({
       sectionText1: "",
       sectionText2: "",
       sectionText3: "",
+      photoURL: "",
       works: [
         { id: 0, name: "【土城】久坐", salary: "56K高薪" },
         { id: 1, name: "【中和】", salary: "80K高錄取" },
@@ -22,6 +23,7 @@ const app = Vue.createApp({
     readMore(e) {
       this.isClicked = true;
       if (e.target.parentElement.firstElementChild.textContent === "0") {
+        this.photoURL = "/images/0.png";
         this.sectionText1 = `✨高時薪200-240✨<br />✨親朋好友一起來✨`;
         this.sectionText2 = `▬▬▬▬▬▬【職缺好康】▬▬▬▬▬</br>
         ✅周領5000</br>
@@ -46,6 +48,7 @@ const app = Vue.createApp({
         ▶️休假制度：做五休二</br>
         做滿三天即可領2000</br>`;
       } else if (e.target.parentElement.firstElementChild.textContent === "1") {
+        this.photoURL = "/images/1.png";
         this.sectionText1 = `✨中和8H周休+簡單電腦組裝</br>
         ┗━━━━━━━━━━━┛</br>
         ✔️高錄取</br>
@@ -70,6 +73,7 @@ const app = Vue.createApp({
         日班210/h 加班前2h.308 第3h 384 月領64000(含加班＆所有津貼)</br>
         夜班250/h 加班前2h.335 第3h 418 月領80000(含加班＆所有津貼)</br>`;
       } else if (e.target.parentElement.firstElementChild.textContent === "2") {
+        this.photoURL = "/images/2.png";
         this.sectionText1 = `✨ᴺᴱᵂ 龜山長期-來做遊戲機</br>
         ┗━━━━━━━━━━━━┛`;
         this.sectionText2 = `▬▬▬▬▬▬【好康來報】▬▬▬▬▬</br>
@@ -95,21 +99,22 @@ const app = Vue.createApp({
         ［夜班］時薪200,$35200-$45320(含加班及所有津貼)</br>
         靠桃園火車站</br>`;
       } else if (e.target.parentElement.firstElementChild.textContent === "3") {
+        this.photoURL = "";
         this.sectionText1 = `✨觀音爽缺-食宿全包-電子作業員</br>
         ┗━━━━━━━━━━━━━━━┛`;
-        this.sectionText2 = `──────【多項福利及高額獎金】──────</br>
+        this.sectionText2 = `▬▬▬▬【多項福利及高額獎金】▬▬▬▬</br>
         ❤️報到獎金/交通津貼2000元(任職滿一個月)</br>
         ❤️完任獎金2000元(任職滿兩個月)</br>
         ❤️完任獎金2000元(任職滿三個月)</br>
         ❤️週領9000元</br>
-        ────────【職缺好康】────────</br>
+        ▬▬▬▬▬▬【職缺好康】▬▬▬▬▬▬</br>
 ✔️線上書審-超便利!!</br>
 ✔️百元舒適宿舍!!</br>
 ✔️美味自助團膳</br>
 ✔️學經歷免</br>
 ✔️高錄取率</br>
 ✔️享勞健保、勞退6%、滿三個月即享有三節禮品(券)</br>`;
-        this.sectionText3 = `────────【職缺說明】────────</br>
+        this.sectionText3 = `▬▬▬▬▬▬【職缺說明】▬▬▬▬▬▬</br>
         ◆ 工作地點：桃園觀音區經建一路</br>
         ◆ 產業：PCB(印刷電路板)</br>
         ◆ 部門：製造部</br>
@@ -125,6 +130,7 @@ const app = Vue.createApp({
         ◆供宿:兩人一間套房，500元/月 (含水電費，設備：冷氣、電視、置物櫃…)</br>
         ◆表現優良可轉長期人員並且享有尾牙周獎、紅包禮金等福利`;
       } else if (e.target.parentElement.firstElementChild.textContent === "4") {
+        this.photoURL = "/images/4.png";
         this.sectionText1 = `❤️❤️額外獎金(正常出勤)10000❤️❤️</br>
         ✨ 學生也OK</br>
         ✨ 免費停車位</br>
@@ -147,6 +153,7 @@ const app = Vue.createApp({
         高薪專案至五月底 後續時薪為200-240`;
         this.sectionText3 = ``;
       } else if (e.target.parentElement.firstElementChild.textContent === "5") {
+        this.photoURL = "/images/5.png";
         this.sectionText1 = `❤️ 高額周領8000❤️</br>
         ❤️ 提供[免費]住宿❤️</br>
         ❤️ 免費供餐 吃到飽!!!!❤️</br>
