@@ -22,7 +22,7 @@
       <img src="fake.jpg" alt="" />
     </div>
     <div>
-      <h2 class="letter-spacing-3">Hedwig✨水水✨</h2>
+      <h2 class="letter-spacing-3 text-dark">Hedwig✨水水✨</h2>
       <p class="letter-spacing-3">
         服務時間：週一至週五08:30-17:30<br />給你最優質的媒合服務😃<br />
         姓名😉➕電話☎️➕居住地🏠=預約成功
@@ -41,10 +41,10 @@
       </a>
     </div>
 
-    <div class="row mb-3">
-      <div class="col work animation1" v-for="w in works">
+    <div class="row works-container">
+      <div class="col-4 work animation1" v-for="w in works">
         <span class="d-none">{{w.id}}</span>
-        <p>{{w.name}}<br />{{w.salary}}</p>
+        <p class="text-nowrap">{{w.name}}<br />{{w.salary}}</p>
         <p class="moreInformation" @click="readMore">點我看更多</p>
       </div>
     </div>
@@ -52,10 +52,7 @@
     <div class="informationBoxWrapper" v-if="isClicked">
       <div class="informationBox">
         <p v-html="sectionText1"></p>
-        <p>▬▬▬▬▬▬【職缺好康】▬▬▬▬▬</p>
         <p v-html="sectionText2"></p>
-        </p>
-        <p>▬▬▬▬▬▬【職缺介紹】▬▬▬▬▬</p>
         <p v-html="sectionText3"></p>
         <button @click="close">
           關閉
