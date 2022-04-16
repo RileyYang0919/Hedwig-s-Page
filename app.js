@@ -101,7 +101,7 @@ const app = Vue.createApp({
         ［夜班］時薪200,$35200-$45320(含加班及所有津貼)</br>
         靠桃園火車站</br>`;
       } else if (e.target.parentElement.firstElementChild.textContent === "3") {
-        this.photoURL = "";
+        this.photoURL = "3.png";
         this.sectionText1 = `✨觀音爽缺-食宿全包-電子作業員</br>
         ┗━━━━━━━━━━━━━━━┛`;
         this.sectionText2 = `▬▬▬▬【多項福利及高額獎金】▬▬▬▬</br>
