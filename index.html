@@ -1,68 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+    <title>Hedwig✨水水✨找工作找我</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://unpkg.com/vue@next" defer></script>
-  <script src="app.js" defer></script>
-  <title>Hedwig✨水水✨找工作找我</title>
-</head>
+  <body>
+    <div class="container" id="vue">
+      <div class="photo">
+        <img src="fake.jpg" alt="" />
+      </div>
+      <div>
+        <h2 class="letter-spacing-3 text-dark">Hedwig✨水水✨</h2>
+        <p class="letter-spacing-3">
+          服務時間：週一至週五08:30-17:30<br />給你最優質的媒合服務😃<br />
+          姓名😉➕電話☎️➕居住地🏠=預約成功
+        </p>
+      </div>
+      <div class="btnBox animation1">
+        <a href="https://line.me/ti/p/JgGCgEBX6q" target="blank">
+          <button class="buttonStyle">
+            <i class="fab fa-line lineColor"></i>➕Line叫過去
+          </button>
+        </a>
+      </div>
+      <div class="btnBox animation2 mb-3">
+        <a href="tel:+886-9-65617032">
+          <button class="buttonStyle">
+            <i class="fas fa-phone-alt phoneColor"></i>電話沒接就Line我👆
+          </button>
+        </a>
+      </div>
 
-<body>
-  <div class="container" id="vue">
-    <div class="photo">
-      <img src="fake.jpg" alt="" />
-    </div>
-    <div>
-      <h2 class="letter-spacing-3 text-dark">Hedwig✨水水✨</h2>
-      <p class="letter-spacing-3">
-        服務時間：週一至週五08:30-17:30<br />給你最優質的媒合服務😃<br />
-        姓名😉➕電話☎️➕居住地🏠=預約成功
-      </p>
-    </div>
-    <div class="btnBox animation1">
-      <a href="https://line.me/ti/p/JgGCgEBX6q" target="blank">
-        <button class="buttonStyle"><i class="fab fa-line lineColor"></i>➕Line叫過去</button>
-      </a>
-    </div>
-    <div class="btnBox animation2 mb-3">
-      <a href="tel:+886-9-65617032">
-        <button class="buttonStyle">
-          <i class="fas fa-phone-alt phoneColor"></i>電話沒接就Line我👆
-        </button>
-      </a>
-    </div>
-
-    <div class="row works-container">
-      <div class="col-4 work animation1" v-for="w in works">
-        <span class="d-none">{{w.id}}</span>
-        <p class="text-nowrap">{{w.name}}<br />{{w.salary}}</p>
-        <p class="moreInformation" @click="readMore">點我看更多</p>
+      <div class="row works-container">
+        <div class="col-4 work animation1" v-for="w in works">
+          <span class="d-none">{{w.id}}</span>
+          <p class="text-nowrap">{{w.name}}<br />{{w.salary}}</p>
+          <p class="moreInformation" @click="readMore">點我看更多</p>
+        </div>
+      </div>
+      <!-- 浮出視窗 -->
+      <div class="informationBoxWrapper" v-if="isClicked">
+        <div class="informationBox">
+          <img :src="photoURL" alt="" class="mb-2" v-if="photoURL!=''" />
+          <p v-html="sectionText1"></p>
+          <p v-html="sectionText2"></p>
+          <p v-html="sectionText3"></p>
+          <button @click="close">關閉</button>
+        </div>
       </div>
     </div>
-    <!-- 浮出視窗 -->
-    <div class="informationBoxWrapper" v-if="isClicked">
-      <div class="informationBox">
-        <img :src="photoURL" alt="" class="mb-2" v-if="photoURL!=''">
-        <p v-html="sectionText1"></p>
-        <p v-html="sectionText2"></p>
-        <p v-html="sectionText3"></p>
-        <button @click="close">
-          關閉
-        </button>
-      </div>
-    </div>
-
-  </div>
-
-</body>
-
+    <script>
+      window.addEventListener(
+        "chatwoot:ready",
+        (function (d, t) {
+          // Use window.$chatwoot here
+          var BASE_URL = "http://34.80.254.80:3000";
+          var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+          g.src = BASE_URL + "/packs/js/sdk.js";
+          g.defer = true;
+          g.async = true;
+          s.parentNode.insertBefore(g, s);
+          g.onload = function () {
+            window.chatwootSDK.run({
+              websiteToken: "EbN1U39u3jsCsxXQBPntZkZd",
+              baseUrl: BASE_URL,
+            });
+          };
+          window.chatwootSettings = {
+            hideMessageBubble: false,
+            position: "right", // This can be left or right
+            locale: "zh-tw", // Language to be set
+            darkMode: "auto", // [light, auto]
+            showPopoutButton: true, //彈出視窗 獨立出來一個視窗
+            type: "expanded_bubble", // [standard, expanded_bubble]
+            launcherTitle: "詢問",
+          };
+          window.$chatwoot.toggle("close");
+        })(document, "script")
+      );
+      window.addEventListener("chatwoot:error", function () {
+        window.chatwoot.toggle("close");
+      });
+    </script>
+  </body>
 </html>
