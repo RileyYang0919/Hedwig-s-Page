@@ -1,10 +1,12 @@
 * {
   /* outline: pink 1px solid; */
 }
+
 body {
   font-family: "微軟正黑體";
   color: white;
 }
+
 body::before {
   content: "";
   position: absolute;
@@ -16,8 +18,9 @@ body::before {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  background-image: url(back.webp);
-  -webkit-filter: opacity(8 0%); /* Safari */
+  background-image: url(back.jpeg);
+  -webkit-filter: opacity(8 0%);
+  /* Safari */
   filter: opacity(60%);
   z-index: -1;
 }
@@ -31,16 +34,19 @@ body::before {
   padding-top: 50px;
   position: relative;
 }
+
 .photo {
   width: 120px;
   height: 120px;
   border-radius: 50%;
 }
+
 .photo img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
 }
+
 .btnBox {
   width: 90%;
   height: 3rem;
@@ -48,39 +54,48 @@ body::before {
   margin-bottom: 10px;
   border: 2px #fff0ac solid;
 }
+
 .animation1 {
   animation-name: btnStyle;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-delay: 1.5s;
 }
+
 .animation2 {
   animation-name: btnStyle;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-delay: 1s;
 }
+
 .btnBox:hover {
   animation: none;
   border-color: white;
 }
+
 .buttonStyle:hover {
   background-color: white;
 }
+
 @keyframes btnStyle {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
 }
+
 .works-container {
   height: 8rem;
 }
+
 .work {
   color: black;
   display: flex;
@@ -96,25 +111,31 @@ body::before {
   font-size: 0.9rem;
   font-weight: 600;
 }
+
 .work p {
   margin-bottom: 0;
   letter-spacing: 2px;
 }
+
 .moreInformation {
   text-decoration: underline;
   color: #6f00d2;
   white-space: nowrap;
 }
+
 @media screen and (min-width: 768px) {
   .btnBox {
     width: 40rem;
   }
+
   .buttonStyle {
     padding-left: 0;
   }
+
   .works-container {
     height: 13rem;
   }
+
   .work {
     font-size: 1.1rem;
   }
@@ -133,6 +154,7 @@ body::before {
   font-weight: 600;
   padding-left: 40px;
 }
+
 .buttonStyle i {
   position: absolute;
   top: 50%;
@@ -140,9 +162,11 @@ body::before {
   transform: translateY(-50%);
   font-size: 2rem;
 }
+
 .letter-spacing-3 {
   letter-spacing: 2.5px;
 }
+
 .lineColor {
   color: #07b53b;
 }
@@ -150,10 +174,12 @@ body::before {
 .phoneColor {
   color: #2894ff;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 .informationBoxWrapper {
   position: fixed;
   width: 100%;
@@ -164,6 +190,7 @@ a {
   overflow-y: scroll;
   z-index: 100;
 }
+
 .informationBox {
   position: absolute;
   top: 10px;
@@ -180,6 +207,7 @@ a {
   flex-direction: column;
   z-index: 100;
 }
+
 .informationBox img {
   width: 100%;
   height: 15rem;
@@ -188,6 +216,7 @@ a {
 .informationBox p {
   margin: 0;
 }
+
 .informationBox button {
   border: none;
   background-color: #b95159;
@@ -200,23 +229,28 @@ a {
   border-radius: 5px;
   margin-top: 10px;
 }
+
 .informationBox button:hover {
   background-color: #234a63;
 }
+
 @media screen and (min-width: 576px) {
   .informationBox img {
     width: 80%;
   }
 }
+
 @media screen and (min-width: 768px) {
   .informationBox {
     width: 60%;
   }
+
   .informationBox img {
     height: 20rem;
     width: 100%;
   }
 }
+
 @media screen and (min-width: 992px) {
   .informationBox {
     width: 40%;
