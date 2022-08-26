@@ -198,26 +198,6 @@ const app = Vue.createApp({
         ［夜班］時薪$225,月賺$39600-$68429(含加班及所有津貼)`;
       }
     }
-  },
-  created() {
-    let databody = {
-      "email" :"riley.yang@artsolutions.io",
-      "password" : "Abc@123"
-    }
-
-    let headers = {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-        "Access-Control-Allow-Origin": "https://chatwoottest.upday.ai",
-        "mode": "no-cors"
-    }
-    fetch("https://chatwoottest.upday.ai/auth/sign_in", {
-        method: "POST",
-        headers: headers,
-        body: JSON.stringify(databody)
-    })
-        .then(response => response.json())
-        .then(json => console.log(json));
   }
 });
 
