@@ -42,7 +42,7 @@
         </button>
       </a>
     </div>
-
+    <!-- 花花 -->
     <div class="row works-container">
       <div class="col-4 work animation1" v-for="w in works">
         <span class="d-none">{{w.id}}</span>
@@ -57,6 +57,47 @@
         <p v-html="sectionText1"></p>
         <button @click="close">關閉</button>
       </div>
+    </div>
+    <!-- 表單 -->
+    <div class="row form">
+      <div class="fs-5 mb-4">留下訊息，將盡快為您服務</div>
+      <form action="" class="d-flex flex-column">
+        <label for="fName">姓名<span class="c-red">*</span></label>
+        <input type="text" name="fName" id="fName">
+
+        <label for="fPhone">電話<span class="c-red">*</span></label>
+        <input type="phone" name="fPhone" id="fPhone">
+        
+        <label for="fBirthday">出生年月日<span class="c-red">*</span></label>
+        <input type="date" name="fBirthday" id="fBirthday">
+
+        <label for="fArea">求職地區<span class="c-red">*</span></label>
+        <select name="fArea" id="fArea">
+          <optgroup label="北部">
+            <option value="" v-for="item in area[0].item">{{item}}</option>
+          </optgroup>
+          <optgroup label="中部">
+            <option value="" v-for="item in area[1].item">{{item}}</option>
+          </optgroup>
+          <optgroup label="南部">
+            <option value="" v-for="item in area[2].item">{{item}}</option>
+          </optgroup>
+          <optgroup label="東部">
+            <option value="" v-for="item in area[3].item">{{item}}</option>
+          </optgroup>
+        </select>
+
+        <label for="fClass">班別<span class="c-red">*</span></label>
+        <div class="d-flex justify-content-start align-items-center">
+          <input type="checkbox" name="class1" id="class1" class="m-0 me-2">
+          <label for="class1" class="me-3">日班</label>
+          <input type="checkbox" name="class2" id="class2" class="m-0 me-2">
+          <label for="class2" class="me-3">中班</label>
+          <input type="checkbox" name="class3" id="class3" class="m-0 me-2">
+          <label for="class3" class="me-3">夜班</label>
+        </div>
+        <button type="submit">通知我</button>
+      </form>
     </div>
   </div>
 </body>
