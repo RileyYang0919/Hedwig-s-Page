@@ -13,6 +13,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://unpkg.com/vue@next" defer></script>
   <script src="app.js" defer></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <title>Hedwig✨水水✨找工作找我</title>
 </head>
 
@@ -42,7 +43,7 @@
         </button>
       </a>
     </div>
-
+    <!-- 花花 -->
     <div class="row works-container">
       <div class="col-4 work animation1" v-for="w in works">
         <span class="d-none">{{w.id}}</span>
@@ -57,6 +58,65 @@
         <p v-html="sectionText1"></p>
         <button @click="close">關閉</button>
       </div>
+    </div>
+    <!-- 表單 -->
+    <div class="row form">
+      <div class="fs-5 mb-4">留下訊息，將盡快為您服務</div>
+      <form action="" class="d-flex flex-column">
+        <label for="fName">姓名<span class="c-red">*</span></label>
+        <input type="text" id="fName" v-model="form_data.name">
+
+        <label for="fPhone">電話<span class="c-red">*</span></label>
+        <input type="phone" id="fPhone" v-model="form_data.phone">
+
+        <label for="fLine">LINE ID</label>
+        <input type="phone" id="fLine" v-model="form_data.line">
+
+        <label for="fBirthday">出生年月日<span class="c-red">*</span></label>
+        <input type="date" id="fBirthday" v-model="form_data.birthday">
+
+        <label>居住地區<span class="c-red">*</span></label>
+        <div class="d-flex justify-content-start align-items-center mb-2">
+          <select class="col-4 me-2" v-model="form_data.area">
+            <optgroup label="北部">
+              <option :value="index" v-for="(item,index) in area_data[0].area">{{index}}</option>
+            </optgroup>
+            <optgroup label="中部">
+              <option :value="index" v-for="(item,index) in area_data[1].area">{{index}}</option>
+            </optgroup>
+            <optgroup label="南部">
+              <option :value="index" v-for="(item,index) in area_data[2].area">{{index}}</option>
+            </optgroup>
+            <optgroup label="東部">
+              <option :value="index" v-for="(item,index) in area_data[3].area">{{index}}</option>
+            </optgroup>
+          </select>
+          <select class="col-4 me-2" v-model="form_data.district">
+            <option :value="item" v-for="item in district_options">{{item}}</option>
+          </select>
+        </div>
+        <!-- <textarea name="" id="" cols="30" rows="2" readonly placeholder="請於上方選取地區"></textarea> -->
+        <label for="fClass">班別 (可複選)<span class="c-red">*</span></label>
+        <div class="d-flex justify-content-start align-items-center">
+          <input type="checkbox" id="class1" class="m-0 me-2" v-model="form_data.class" value="日班">
+          <label for="class1" class="me-3">日班</label>
+          <input type="checkbox" id="class2" class="m-0 me-2" v-model="form_data.class" value="中班">
+          <label for="class2" class="me-3">中班</label>
+          <input type="checkbox" id="class3" class="m-0 me-2" v-model="form_data.class" value="夜班">
+          <label for="class3" class="me-3">夜班</label>
+        </div>
+        <label for="fHome" class="mt-3">是否需要含住宿？<span class="c-red">*</span></label>
+        <div class="d-flex justify-content-start align-items-center">
+          <input type="radio" id="fHome_yes" class="m-0 me-2" value="YES" v-model="form_data.home">
+          <label for="fHome_yes" class="me-3">是</label>
+          <input type="radio" id="fHome_no" class="m-0 me-2" value="NO" v-model="form_data.home">
+          <label for="fHome_no" class="me-3">否</label>
+          <input type="radio" id="fHome_both" class="m-0 me-2" value="都可以" v-model="form_data.home">
+          <label for="fHome_both" class="me-3">都可以</label>
+        </div>
+        <div v-for="error in submit_error" class="error">*[ {{error}} ] 不可空白 </div>
+        <button class="mt-3" id="submitBtn" @click="sendEmail($event)">送出</button>
+      </form>
     </div>
   </div>
 </body>
