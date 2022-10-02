@@ -295,8 +295,8 @@ const app = Vue.createApp({
             'Content-Type': 'application/json'
           }
         }).then(function (res) {
-          alert("訊息發送成功!")
-          console.log(res)
+          alert("訊息發送成功!將盡快與您聯繫!")
+          // console.log(res)
         })
 
         // await fetch("https://api.emailjs.com/api/v1.1/history?user_id=YfZuMHMNZv0_vYCb0&accessToken=tOa5Qrurykc4wsaKqOcRE", {
