@@ -13,7 +13,7 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 240%;
+  height: 240vh;
   background-repeat: repeat-y;
   background-position: center;
   background-attachment: fixed;
@@ -24,7 +24,21 @@ body::before {
   filter: opacity(60%);
   z-index: -1;
 }
-
+@media screen and (max-height: 650px) {
+  body::before {
+    height: 300vh;
+  }
+}
+@media screen and (max-height: 550px) {
+  body::before {
+    height: 330vh;
+  }
+}
+@media screen and (max-height: 450px) {
+  body::before {
+    height: 380vh;
+  }
+}
 .container {
   display: flex;
   justify-content: center;
@@ -103,7 +117,7 @@ body::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 108%;
+  height: 112%;
   cursor: pointer;
   background-image: url(blossom.png);
   background-repeat: no-repeat;
@@ -241,6 +255,7 @@ a {
   color: black;
   padding: 0.5rem;
   width: 100%;
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 576px) {
