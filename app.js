@@ -545,6 +545,35 @@ const app = Vue.createApp({
           ➨夜:時薪240/H $45782-$82036</br> 
           ▬▬▬▬▬▬▬【快速♥️報名】▬▬▬▬▬▬▬</br> 
         `;
+      } else if (e.target.parentElement.firstElementChild.textContent === "4") {
+        this.photoURL = "4.png";
+        this.sectionText1 = `
+          ✨觀音短期+知名幸福物流</br>
+          ┗━━━━━━━━━━━┛</br>
+          ▬▬▬▬▬▬▬好康報馬仔▬▬▬▬▬▬▬</br>
+          ✔無學經歷限制</br>
+          ✔快速報到</br>
+          ✔周領4000</br>
+          ✔激勵獎金</br>
+          ✔美味團膳</br>
+          ✔8H完全不加班!</br>
+          ✔等當兵OK</br>
+          ✔付費宿舍</br>
+          ✔免無塵衣,靜電衣</br>
+          ✔享勞健保、勞退6%、滿三個月即享有三節禮品(券)</br>
+          ▬▬▬▬▬▬▬職缺介紹▬▬▬▬▬▬▬</br>
+          ◆ 工作地點：觀音區工業七路</br>
+          ◆ 工作內容：常溫物流,走動,久站,整貨...</br>
+          ◆ 休假制度：月排休8-9天(固定休周日、餘休假排休)</br>
+          ◆ 工作時間：</br>
+          <日班>0800-1700</br>
+          <中班>1300-2200</br>
+          <夜班>2200-0700</br>
+          ◆ 薪資介紹：</br>
+          <日班>時薪$190,月賺$33440</br>
+          <中班>時薪$210,月賺$36960</br>
+          <夜班>時薪$240,月賺$42240</br>
+        `;
       } else if (e.target.parentElement.firstElementChild.textContent === "5") {
         this.photoURL = "5.png";
         this.sectionText1 = `✨ 高時薪215-250(高薪達82K)✨</br> 
