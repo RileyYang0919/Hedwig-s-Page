@@ -117,7 +117,7 @@ body::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 118%;
+  height: 133%;
   cursor: pointer;
   background-image: url(blossom.png);
   background-repeat: no-repeat;
